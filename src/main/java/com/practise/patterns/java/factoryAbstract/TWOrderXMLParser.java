@@ -1,0 +1,12 @@
+package com.practise.patterns.java.factoryAbstract;
+
+public class TWOrderXMLParser implements XMLParser{
+
+	@Override
+	public String parse() {
+		System.out.println("TW Parsing order XML...");
+		return "TW Order XML Message";
+	}
+
+}
+

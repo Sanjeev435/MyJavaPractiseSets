@@ -1,0 +1,34 @@
+
+Singleton Pattern :
+--------------------------------------------------------
+Sometimes it’s important for some classes to have exactly one instance. There are many objects we only need one instance
+of them and if we, instantiate more than one, we’ll run into all sorts of problems like incorrect program behavior, overuse
+of resources, or inconsistent results.
+
+You may require only one object of a class, for example, when you are a creating the context of an application, or a thread
+manageable pool, registry settings, a driver to connect to the input or output console etc. More than one object of that type
+clearly will cause inconsistency to your program.
+
+The Singleton Pattern ensures that a class has only one instance, and provides a global point of access to it. However, although
+the Singleton is the simplest in terms of its class diagram because there is only one single class, its implementation is a bit 
+trickier.
+______________________________________________________________________________________________________________________________________
+
+How to correctly implement Singleton pattern :
+--------------------------------------------------------------------
+There are some other ways to break the singleton pattern.
+
+• If the class is Serializable.
+• If it’s Clonable.
+• It can be break by Reflection.
+• And also if, the class is loaded by multiple class loaders.
+
+Singleton.class shows how we can protect our class from getting instantiated more than once.
+______________________________________________________________________________________________________________________________________
+
+When to use singleton :
+--------------------------------------------------------
+• There must be exactly one instance of a class, and it must be accessible to clients from a well-known access point.
+
+• When the sole instance should be extensible by sub-classing, and clients should be able to use an extended instance 
+without modifying their code.
