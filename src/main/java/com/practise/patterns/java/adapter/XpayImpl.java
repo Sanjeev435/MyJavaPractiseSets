@@ -8,7 +8,7 @@ import com.practise.patterns.java.adapter.Xpay;
  * about the credit card and customer name.
  * 
  * This Xpay interface is implemented in the code which is used to instantiate
- * an object of this type, and exposes the object to the vendor�s API. The
+ * an object of this type, and exposes the object to the vendor's API. The
  * following class defines the implementation to the Xpay interface.
  * 
  * @author Sanjeev

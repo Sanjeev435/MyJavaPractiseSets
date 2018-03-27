@@ -10,7 +10,7 @@ package com.practise.patterns.java.facade;
  * complex subsystem. Subsystems often get more complex as they evolve. Most
  * patterns, when applied, result in more and smaller classes. This makes the
  * subsystem more reusable and easier to customize, but it also becomes harder
- * to use for clients that don’t need to customize it. A facade can provide a
+ * to use for clients that don't need to customize it. A facade can provide a
  * simple default view of the subsystem that is good enough for most clients.
  * Only clients needing more customizability will need to look beyond the
  * facade. 

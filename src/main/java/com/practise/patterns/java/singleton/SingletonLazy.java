@@ -7,7 +7,7 @@ package com.practise.patterns.java.singleton;
  * 
  * This behavior can be overcome by the below way.
  * 
- * It’s always a good approach that an object should get created when it is
+ * It's always a good approach that an object should get created when it is
  * required. So, we will create an object on the first call and then will return
  * the same object on other successive calls.
  * 

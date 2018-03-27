@@ -2,7 +2,7 @@ package com.practise.patterns.java.adapter;
 
 /**
  * 
- * New vendor’s key interface
+ * New vendor's key interface
  * 
  * @author Sanjeev
  *

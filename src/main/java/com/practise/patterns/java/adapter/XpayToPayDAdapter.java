@@ -9,7 +9,7 @@ import com.practise.patterns.java.adapter.Xpay;
  * 
  * In the above code, we have created an Adapter(XpayToPayDAdapter). The adapter
  * implements the PayD interface, as it is required to mimic like a PayD type of
- * object. The adapter uses object composition to hold the object, it�s supposed
+ * object. The adapter uses object composition to hold the object, it's supposed
  * to be adapting, an Xpay type of object. The object is passed into the adapter
  * through its constructor.
  * 
@@ -19,8 +19,8 @@ import com.practise.patterns.java.adapter.Xpay;
  * interfaces is very much similar, i.e. to provide the customer and credit card
  * info to their specific vendors.
  * 
- * The setProp() method of the above class is used to set the xpay�s properties
- * into the payD�s object. We set the methods which are similar in work in both
+ * The setProp() method of the above class is used to set the xpay's properties
+ * into the payD's object. We set the methods which are similar in work in both
  * the interfaces. However, there is only single method in PayD interface to set
  * the month and the year of the credit card, as opposed to two methods in the
  * Xpay interface. We joined the result of the two methods of the Xpay object
