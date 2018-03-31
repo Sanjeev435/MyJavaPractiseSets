@@ -1,5 +1,18 @@
 package com.practise.algo.sort;
 
+/**
+ * The selection sort improves on the bubble sort by reducing the number of
+ * swaps necessary from O(N2) to O(N). Unfortunately, the number of comparisons
+ * remains O(N2). However, the selection sort can still offer a significant
+ * improvement for large records that must be physically moved around in memory,
+ * causing the swap time to be much more important than the comparison time.
+ * (Typically, this isn’t the case in Java, where references are moved around,
+ * not entire objects.)
+ * 
+ * @author Sanjeev
+ *
+ * @param <E>
+ */
 public class SelectionSort<E extends Object> {
 
 	private E[] array;
