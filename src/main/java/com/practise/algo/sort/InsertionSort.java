@@ -19,41 +19,26 @@ public class InsertionSort<E extends Object> {
 	public InsertionSort(E[] array) {
 		this.array = array;
 	}
-
+	
 	/**
 	 * Sort the Array
 	 */
 	public void sort() {
 		int length = array.length;
-//		int minPosition = 0;
-//		boolean isSortNeeded = false;
+		int out, in;
 
-		int in, out;
-		for(out=1; out<length; out++) // out is dividing line
-		{
-		E temp = array[out]; // remove marked item
-		in = out; // start shifts at out
-		while(in>0 && compare(array[in-1], temp) >=0) // until one is smaller,
-		{
-			array[in] = array[in-1]; // shift item right,
-		--in; // go left one position
+		for (out = 1; out < length; out++) {
+			E temp = array[out];
+			in = out;
+			
+			while(in > 0 && compare(array[in - 1], temp) > 0) {
+				array[in] = array[in - 1];
+				--in;
+			}
+
+			array[in] = temp;
 		}
-		array[in] = temp; // insert marked item
-		} // end for
-		} // end insertionSort()
-
-	/**
-	 * Swap the elements within array
-	 * 
-	 * @param nthPosition
-	 * @param n1Position
-	 */
-//	private void swap(int nthPosition, int n1Position) {
-//		E temp = array[nthPosition];
-//
-//		array[nthPosition] = array[n1Position];
-//		array[n1Position] = temp;
-//	}
+	}
 
 	/**
 	 * Compare two elements
