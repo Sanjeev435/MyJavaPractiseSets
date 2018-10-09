@@ -5,7 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-public class StackTest {
+public class StackWithArrayTest {
 	
 	@Rule
     public ExpectedException thrown = ExpectedException.none();
@@ -13,7 +13,7 @@ public class StackTest {
 	@Test
 	public void shouldTestAllStackFunctionalities() throws Exception {
 		
-		Stack<Integer> stack = new Stack<Integer>(5);
+		Stack<Integer> stack = new StackWithArray<Integer>(5);
 		Assert.assertEquals(true, stack.isEmpty());
 		
 		stack.push(32);
@@ -45,8 +45,17 @@ public class StackTest {
 		thrown.expect(IllegalAccessException.class);
         thrown.expectMessage("Stack is empty !!");
 		
-		Stack<Integer> stack = new Stack<Integer>(10);
+        Stack<Integer> stack = new StackWithArray<Integer>(10);
 		stack.pop();
+	}
+	
+	@Test
+	public void ShouldThrowExceptionForEmptyStackPeek() throws Exception {
+		thrown.expect(IllegalAccessException.class);
+        thrown.expectMessage("Stack is empty !!");
+		
+        Stack<Integer> stack = new StackWithArray<Integer>(10);
+		stack.peek();
 	}
 	
 	@Test
@@ -54,7 +63,7 @@ public class StackTest {
 		thrown.expect(IllegalAccessException.class);
         thrown.expectMessage("Stack is full !!");
 		
-		Stack<Integer> stack = new Stack<Integer>(2);
+        Stack<Integer> stack = new StackWithArray<Integer>(2);
 		stack.push(2);
 		stack.push(5);
 		stack.push(9);
