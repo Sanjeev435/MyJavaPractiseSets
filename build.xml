@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="MyJavaPractiseSets">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../Eclipse_Oxygen/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/junit/junit/4.12/junit-4.12.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/surefire/surefire-junit4/2.8/surefire-junit4-2.8.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/surefire/surefire-api/2.8/surefire-api-2.8.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/plugins/maven-surefire-plugin/2.8/maven-surefire-plugin-2.8.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/surefire/surefire-booter/2.8/surefire-booter-2.8.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/surefire/maven-surefire-common/2.8/maven-surefire-common-2.8.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/codehaus/plexus/plexus-utils/2.0.7/plexus-utils-2.0.7.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/classworlds/classworlds/1.1/classworlds-1.1.jar"/>
+        <pathelement location="C:/Users/Sanjeev/.m2/repository/org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.jar"/>
+    </path>
+    <path id="MyJavaPractiseSets.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.App (2).classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.BubbleSortTest (1).classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.BubbleSortTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DelimiterMatcherTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HighArrayApp.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.InsertionSortTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.QueueWithArrayTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ReverseWordTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SelectionSortTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.StackTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.StackWithArrayTest.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Test.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.Test4.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.TestRegEX.classpath">
+        <path refid="MyJavaPractiseSets.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/resources">
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <exclude name="**"/>
+            <classpath refid="MyJavaPractiseSets.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <classpath refid="MyJavaPractiseSets.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="App (2)">
+        <java classname="java.practise.sets.App" failonerror="true" fork="yes">
+            <classpath refid="run.App (2).classpath"/>
+        </java>
+    </target>
+    <target name="BubbleSortTest (1)">
+        <java classname="com.practise.algo.sort.bubble.BubbleSortTest" failonerror="true" fork="yes">
+            <classpath refid="run.BubbleSortTest (1).classpath"/>
+        </java>
+    </target>
+    <target name="BubbleSortTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.algo.sort.bubble.BubbleSortTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.BubbleSortTest.classpath"/>
+        </junit>
+    </target>
+    <target name="DelimiterMatcherTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.stack.DelimiterMatcherTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.DelimiterMatcherTest.classpath"/>
+        </junit>
+    </target>
+    <target name="HighArrayApp">
+        <java classname="com.practise.array.HighArrayApp" failonerror="true" fork="yes">
+            <classpath refid="run.HighArrayApp.classpath"/>
+        </java>
+    </target>
+    <target name="InsertionSortTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.algo.sort.InsertionSortTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.InsertionSortTest.classpath"/>
+        </junit>
+    </target>
+    <target name="QueueWithArrayTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.queue.QueueWithArrayTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.QueueWithArrayTest.classpath"/>
+        </junit>
+    </target>
+    <target name="ReverseWordTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.stack.ReverseWordTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.ReverseWordTest.classpath"/>
+        </junit>
+    </target>
+    <target name="SelectionSortTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.algo.sort.SelectionSortTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.SelectionSortTest.classpath"/>
+        </junit>
+    </target>
+    <target name="StackTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.stack.StackTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.StackTest.classpath"/>
+        </junit>
+    </target>
+    <target name="StackWithArrayTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.practise.stack.StackWithArrayTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.StackWithArrayTest.classpath"/>
+        </junit>
+    </target>
+    <target name="Test">
+        <java classname="com.practise.stack.Test" failonerror="true" fork="yes">
+            <classpath refid="run.Test.classpath"/>
+        </java>
+    </target>
+    <target name="Test4">
+        <java classname="Test4" failonerror="true" fork="yes">
+            <classpath refid="run.Test4.classpath"/>
+        </java>
+    </target>
+    <target name="TestRegEX">
+        <java classname="com.practise.queue.TestRegEX" failonerror="true" fork="yes">
+            <classpath refid="run.TestRegEX.classpath"/>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
