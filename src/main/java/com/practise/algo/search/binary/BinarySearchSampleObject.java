@@ -7,7 +7,7 @@ public class BinarySearchSampleObject {
 	BinarySearchSampleObject a = new BinarySearchSampleObject();
 
 	public static int[] getIntArray() {
-		int[] aIntArray = { 45, 85, 36, 32, 6, 35, 68, 767, 46, 70, 26, 99,
+		int[] aIntArray = { 45, 85, 36, 32, 6, 35, 821, 68, 767, 46, 70, 26, 99,
 				257, 59 };
 		Arrays.sort(aIntArray);
 		return aIntArray;

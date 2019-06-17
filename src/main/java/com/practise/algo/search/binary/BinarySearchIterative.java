@@ -14,7 +14,7 @@ import com.practise.algo.search.binary.BinarySearchSampleObject.BinarySearchSamp
 public class BinarySearchIterative {
 
 	public static void main(String[] args) {
-		int aInput = 767;
+		int aInput = 821;
 		System.out.println("Size of Int Array :"
 				+ BinarySearchSampleObject.getIntArray().length + "\n"
 				+ "Int array contents :");

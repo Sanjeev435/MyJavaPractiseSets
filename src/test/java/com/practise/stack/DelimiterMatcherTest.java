@@ -21,6 +21,7 @@ public class DelimiterMatcherTest {
 	
 	private static String closingBraces = "})]";
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testDelimiterMatcher() throws Exception {
 		

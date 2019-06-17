@@ -1,8 +1,6 @@
 
 package com.practise.hacker;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -44,25 +42,27 @@ public class ToggleString {
 		String line = br.readLine();*/
 
 		// Scanner
-		
-		  Scanner s = new Scanner(System.in); 
-		  System.out.println("Enter Something : "); 
-		 String line = s.nextLine();
-		 
-		// System.Console
-		/*System.out.println("Enter Something : ");
-		String line = System.console().readLine();*/
+		try (Scanner s = new Scanner(System.in)) {
+			System.out.println("Enter Something : ");
+			String line = s.nextLine();
 
-		char[] aCharArray = line.toCharArray();
-		StringBuffer sb = new StringBuffer();
-		for (char aChar : aCharArray) {
-			if (Character.isUpperCase(aChar)) {
-				sb.append(String.valueOf(aChar).toLowerCase());
-			} else {
-				sb.append(String.valueOf(aChar).toUpperCase());
+			// System.Console
+			/*
+			 * System.out.println("Enter Something : "); 
+			 * String line = System.console().readLine();
+			 */
+
+			char[] aCharArray = line.toCharArray();
+			StringBuffer sb = new StringBuffer();
+			for (char aChar : aCharArray) {
+				if (Character.isUpperCase(aChar)) {
+					sb.append(String.valueOf(aChar).toLowerCase());
+				} else {
+					sb.append(String.valueOf(aChar).toUpperCase());
+				}
 			}
+			System.out.println(sb.toString());
 		}
-		System.out.println(sb.toString());
 	}
 
 }
