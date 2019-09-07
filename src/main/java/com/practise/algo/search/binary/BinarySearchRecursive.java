@@ -1,6 +1,6 @@
 package com.practise.algo.search.binary;
 
-import com.practise.algo.search.binary.BinarySearchSampleObject.BinarySearchSampleDTO;
+import com.practise.dto.BinarySearchSampleDTO;
 
 public class BinarySearchRecursive {
 
@@ -31,7 +31,7 @@ public static void main(String[] args) {
 	for (BinarySearchSampleDTO element : BinarySearchSampleObject
 			.getClassObjArray())
 		System.out.println(element.getId() + " ,"
-				+ element.getEmpFirstName() + " ," + element.emplastName);
+				+ element.getEmpFirstName() + " ," + element.getEmplastName());
 	System.out.println("\nSearch for first name : "+firstName);
 	searchNameInClassArray(BinarySearchSampleObject.getClassObjArray(),
 			firstName);
@@ -39,12 +39,12 @@ public static void main(String[] args) {
  
 private static void searchNameInClassArray(
 		BinarySearchSampleDTO[] classObjArray, String firstName) {
-	// TODO Auto-generated method stub
+
 	
 }
 
 private static void searchNameInArray(String[] stringArray, String aString) {
-	// TODO Auto-generated method stub
+
 	
 }
 

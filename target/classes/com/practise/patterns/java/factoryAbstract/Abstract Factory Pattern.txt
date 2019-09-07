@@ -1,7 +1,7 @@
 Problem :
 ------------------------------------------------------------------------
 
-In today’s modern world, everyone is using software to facilitate their jobs. Recently, a product company has shifted the way they used 
+In today's modern world, everyone is using software to facilitate their jobs. Recently, a product company has shifted the way they used 
 to take orders from their clients. The company is now looking to use an application to take orders from them. They receive orders, errors 
 in orders, feedback for the previous order, and responses to the order in an XML format. The company has asked you to develop an application 
 to parse the XML and display the result to them.
@@ -67,7 +67,7 @@ ________________________________________________________________________________
 
 When to use Factory Method Pattern:
 ---------------------------------------------------------------------------
-A class can’t anticipate the class of objects it must create.
+A class can't anticipate the class of objects it must create.
 A class wants its subclasses to specify the objects it creates.
 Classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate.
 

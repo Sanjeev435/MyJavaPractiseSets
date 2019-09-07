@@ -1,6 +1,6 @@
 package com.practise.algo.search.binary;
 
-import com.practise.algo.search.binary.BinarySearchSampleObject.BinarySearchSampleDTO;
+import com.practise.dto.BinarySearchSampleDTO;
 
 /**
  * This class consists of iterative form of binary search algorithm.
@@ -39,11 +39,10 @@ public class BinarySearchIterative {
 		for (BinarySearchSampleDTO element : BinarySearchSampleObject
 				.getClassObjArray())
 			System.out.println(element.getId() + " ,"
-					+ element.getEmpFirstName() + " ," + element.emplastName);
+					+ element.getEmpFirstName() + " ," + element.getEmplastName());
 		System.out.println("\nSearch for first name : " + firstName);
 		searchNameInClassArray(BinarySearchSampleObject.getClassObjArray(),
 				firstName);
-
 	}
 
 	/**
@@ -71,7 +70,6 @@ public class BinarySearchIterative {
 		}
 		if (notFound)
 			System.out.println("Number " + aInput + " not found in the array.");
-
 	}
 
 	/**
@@ -119,7 +117,7 @@ public class BinarySearchIterative {
 			if (firstName.equalsIgnoreCase(anArray[midPoint].getEmpFirstName())) {
 				System.out.println("'" + firstName + "' found with ID as '"
 						+ anArray[midPoint].getId() + "', lastname as '"
-						+ anArray[midPoint].emplastName + "' and at position "
+						+ anArray[midPoint].getEmplastName() + "' and at position "
 						+ (midPoint + 1)
 						+ " in the BinarySearchSampleDTO array.");
 				notFound = false;
@@ -135,5 +133,4 @@ public class BinarySearchIterative {
 			System.out.println("Element with first name as '" + firstName
 					+ "' not found in the BinarySearchSampleDTO array.");
 	}
-
 }
