@@ -10,7 +10,7 @@ public class StackWithArrayTest {
 	@Rule
     public ExpectedException thrown = ExpectedException.none();
 	
-	@SuppressWarnings("deprecation")
+
 	@Test
 	public void shouldTestAllStackFunctionalities() throws Exception {
 		

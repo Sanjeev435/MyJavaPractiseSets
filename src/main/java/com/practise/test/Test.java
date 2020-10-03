@@ -255,6 +255,7 @@ public class Test implements Comparator<Test>{
 		
 		int gg = 10;
 		int ggg = 11;
+		
 		System.out.println(18/9);
 		if(gg>ggg)System.out.println(gg);
 		else System.out.println(ggg);
@@ -267,6 +268,21 @@ public class Test implements Comparator<Test>{
 		index = Arrays.binarySearch(ab,  new Test(80), ab[0]);
 		System.out.println(index);
 		
+		System.out.println("Inteface Test");
+			Defaulable defaulable = DefaulableFactory.create( DefaultableImpl::new );
+			System.out.println( defaulable.notRequired() );
+			defaulable = DefaulableFactory.create( OverridableImpl::new );
+			System.out.println( defaulable.notRequired() );
+			
+			System.out.println("-----------------------------");
+			final Car car = Car.create( Car::new );
+			final List< Car > cars = Arrays.asList( car );
+			cars.forEach(Car :: collide );
+
+			cars.forEach( Car::repair );
+
+			final Car police = Car.create( Car::new );
+			cars.forEach( police::follow );
 		
 	
 	}
