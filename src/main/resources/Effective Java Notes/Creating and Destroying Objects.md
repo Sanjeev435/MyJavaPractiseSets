@@ -1,9 +1,9 @@
 ## --------------------------------------------------------------------------------------------------------
-## ------------------------------------  Creating and Destroying Objects ------------------------------
+## ------------------------------------  **Creating and Destroying Objects** ------------------------------
 ## --------------------------------------------------------------------------------------------------------
 
 
-### Consider a builder when faced with many constructor parameters.
+### **Consider a builder when faced with many constructor parameters.**
 ## -----------------------------------------------------------------------------------------
 * Abstract classes have abstract builders; concrete classes have concrete builders.
 
