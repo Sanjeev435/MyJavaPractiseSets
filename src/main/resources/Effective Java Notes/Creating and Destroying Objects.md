@@ -3,7 +3,7 @@
 ## --------------------------------------------------------------------------------------------------------
 
 
-### **Consider a builder when faced with many constructor parameters.**
+### 1.Consider a builder when faced with many constructor parameters.
 ## -----------------------------------------------------------------------------------------
 * Abstract classes have abstract builders; concrete classes have concrete builders.
 
@@ -19,10 +19,9 @@
 * The Builder pattern is a good choice when designing classes whose constructors or static factories would have more 
   than a handful of parameters, especially if many of the parameters are optional or of identical type.
   
+
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
-### -----------------------------------------------------------------------------------------------------------------------------
-### -----------------------------------------------------------------------------------------------------------------------------
 
 ### Enforce the singleton property with a private constructor or an enum type.
 ## -----------------------------------------------------------------------------------------
