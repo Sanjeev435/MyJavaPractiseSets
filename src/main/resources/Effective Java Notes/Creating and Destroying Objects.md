@@ -3,7 +3,7 @@
 ## --------------------------------------------------------------------------------------------------------
 
 
-### 1. Consider a builder when faced with many constructor parameters.
+### Consider a builder when faced with many constructor parameters.
 ## -----------------------------------------------------------------------------------------
 * Abstract classes have abstract builders; concrete classes have concrete builders.
 
@@ -23,7 +23,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 2. Enforce the singleton property with a private constructor or an enum type.
+### Enforce the singleton property with a private constructor or an enum type.
 ## -----------------------------------------------------------------------------------------
 * A singleton is simply a class that is instantiated exactly once.
   Singletons typically represent either a stateless object such as a function or a system component that is intrinsically 
@@ -38,7 +38,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 3. Enforce noninstantiability with a private constructor.
+### Enforce noninstantiability with a private constructor.
 ## -----------------------------------------------------------------------------------------
 * Do not use a singleton or static utility class to implement a class that depends on one or more underlying resources 
   whose behavior affects that of the class, and do not have the class create these resources directly. Instead, pass the 
@@ -49,7 +49,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 4. Avoid creating unnecessary objects
+### Avoid creating unnecessary objects
 ## -----------------------------------------------------------------------------------------
 * Reuse can be both faster and more stylish. An object can always be reused if it is immutable. For e.g: Strings
 
@@ -83,7 +83,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 5. Eliminate obsolete object references 
+### Eliminate obsolete object references 
 ## -----------------------------------------------------------------------------------------
 
 * Always derefrence object with null which are not required.
@@ -106,7 +106,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 6. Avoid finalizers and cleaners 
+### Avoid finalizers and cleaners 
 ## -----------------------------------------------------------------------------------------
 * Finalizers are unpredictable, often dangerous, and generally unnecessary. Their use can cause erratic behavior, poor 
   performance, and portability problems.
@@ -148,7 +148,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### 7. Prefer try-with-resources to try-finally 
+### Prefer try-with-resources to try-finally 
 ## -----------------------------------------------------------------------------------------
 * To be usable with this construct, a resource must implement the AutoCloseable interface, which consists of a single 
   void-returning close method. Many classes and interfaces in the Java libraries and in third-party libraries now implement 
