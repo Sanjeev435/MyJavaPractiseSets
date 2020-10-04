@@ -1,9 +1,9 @@
-#
+
 ## ------------------------------------  **Creating and Destroying Objects** ------------------------------
 
 
-### Consider a builder when faced with many constructor parameters.
-## -----------------------------------------------------------------------------------------
+### 1. Consider a builder when faced with many constructor parameters.
+
 * Abstract classes have abstract builders; concrete classes have concrete builders.
 
 * The Builder pattern simulates named optional parameters.
@@ -22,8 +22,8 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Enforce the singleton property with a private constructor or an enum type.
-## -----------------------------------------------------------------------------------------
+### 2. Enforce the singleton property with a private constructor or an enum type.
+
 * A singleton is simply a class that is instantiated exactly once.
   Singletons typically represent either a stateless object such as a function or a system component that is intrinsically 
   unique.
@@ -37,8 +37,8 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Enforce noninstantiability with a private constructor.
-## -----------------------------------------------------------------------------------------
+### 3. Enforce noninstantiability with a private constructor.
+
 * Do not use a singleton or static utility class to implement a class that depends on one or more underlying resources 
   whose behavior affects that of the class, and do not have the class create these resources directly. Instead, pass the 
   resources, or factories to create them, into the constructor (or static factory or builder). This practice, known as 
@@ -48,8 +48,8 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Avoid creating unnecessary objects
-## -----------------------------------------------------------------------------------------
+### 4. Avoid creating unnecessary objects
+
 * Reuse can be both faster and more stylish. An object can always be reused if it is immutable. For e.g: Strings
 
 * We can often avoid creating unnecessary objects by using static factory methods in preference to constructors on 
@@ -82,8 +82,7 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Eliminate obsolete object references 
-## -----------------------------------------------------------------------------------------
+### 5. Eliminate obsolete object references 
 
 * Always derefrence object with null which are not required.
   Nulling out object references should be the exception rather than the norm.
@@ -105,8 +104,8 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Avoid finalizers and cleaners 
-## -----------------------------------------------------------------------------------------
+### 6. Avoid finalizers and cleaners 
+
 * Finalizers are unpredictable, often dangerous, and generally unnecessary. Their use can cause erratic behavior, poor 
   performance, and portability problems.
 
@@ -147,8 +146,8 @@
 **XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
 
 
-### Prefer try-with-resources to try-finally 
-## -----------------------------------------------------------------------------------------
+### 7. Prefer try-with-resources to try-finally 
+
 * To be usable with this construct, a resource must implement the AutoCloseable interface, which consists of a single 
   void-returning close method. Many classes and interfaces in the Java libraries and in third-party libraries now implement 
   or extend AutoCloseable. 
