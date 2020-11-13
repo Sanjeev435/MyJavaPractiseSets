@@ -1,4 +1,4 @@
-## Patterns Information
+# Patterns Information
 24 Gang of Four design patterns, as listed in the book Design Patterns: Elements of Reusable Object-Oriented Software. Each pattern includes class diagrams, explanation, usage information, and a real world example.
 
 #### Creational Patterns: 
@@ -18,7 +18,7 @@ Deals with class relationships that can be changed at compile time.
 
 #### Patterns with classification: 
 |    Creational    | Structural |         Behavioral       |
-|------------------|:----------:|-------------------------:|
+|------------------|:----------:|:------------------------:|
 | Abstract Factory |  Decorator |         Observer         |
 |  Factory Method  |   Adapter  |  Chain Of Responsibility |
 |     Prototype    |   Facade   |       Interpreter        |
