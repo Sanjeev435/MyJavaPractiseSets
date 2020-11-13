@@ -18,7 +18,7 @@ Deals with class relationships that can be changed at compile time.
 
 #### Patterns with classification: 
 |    Creational    | Structural |         Behavioral       |
-|------------------|:----------:|:------------------------:|
+|:----------------:|:----------:|:------------------------:|
 | Abstract Factory |  Decorator |         Observer         |
 |  Factory Method  |   Adapter  |  Chain Of Responsibility |
 |     Prototype    |   Facade   |       Interpreter        |
