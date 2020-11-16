@@ -38,27 +38,37 @@ instance. This eliminates the need for an application object to deal with the va
 <b>Please refer to picture Factoryclass_diagram_1.jpg </b>
 
 Product : Defines the interface of objects the factory method creates.
+```
 XmlParser.java
+```
 
-ConcreteProduct : Implements the Product interface.
+#### ConcreteProduct : Implements the Product interface.
+
+```
 ErrorXMLParser.java
 FeedbackXML.java
 OrderXMLParser.java
 ResponseXMLParser.java
+```
 
-Creator : Declares the factory method, which returns an object of type Product. Creator may also define a default implementation of the 
-		  factory method that returns a default ConcreteProduct object.
-		  May call the factory method to create a Product object.  
-To display the parsed messages from the parsers, an abstract service class is created which will be extends by service specific, i.e. 
-parser specific, display classes.
+##### Creator :
+Declares the factory method, which returns an object of type Product. 
+Creator may also define a default implementation of the 
+1. factory method that returns a default ConcreteProduct object.
+2. May call the factory method to create a Product object.  
+To display the parsed messages from the parsers, an abstract service class is created which will be extends by service specific, i.e. parser specific, display classes.
+```
 DisplayService.java
+```
 		  
 ConcreteCreator : Overrides the factory method to return an instance of a ConcreteProduct.
 Below are the subclasses of the DisplayService which implement the getParser method.
+```
 ErrorXMLDisplayService.java
 FeedbackXMLDisplayService.java
 OrderXMLDisplayService.java
 ResponseXMLDisplayService.java
+```
 
 Factory methods eliminate the need to bind application-specific classes into your code. The code only deals with the Product interface; therefore
 it can work with any user-defined ConcreteProduct classes.
