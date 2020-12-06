@@ -16,10 +16,10 @@
 
 
 #### When to use:
- • Many similar objects are used and storage cost is high.
- • The majority of each object's state can be made extrinsic.
- • A few shared objects can replace many unshared ones.
- • The identity of each object does not matter.
+ * Many similar objects are used and storage cost is high.
+ * The majority of each object's state can be made extrinsic.
+ * A few shared objects can replace many unshared ones.
+ * The identity of each object does not matter.
  
 
 #### Advantages & Disadvantages
