@@ -1,11 +1,11 @@
 ### Purpose:
-  • Allows for object level access control by acting as a pass through entity or a placeholder object.
+  * Allows for object level access control by acting as a pass through entity or a placeholder object.
 
 #### Use When 
-  • The object being represented is external to the system
-  • Objects need to be created on demand.
-  • Access control for the original object is required.
-  • Added functionality is required when an object is accessed.
+  * The object being represented is external to the system
+  * Objects need to be created on demand.
+  * Access control for the original object is required.
+  * Added functionality is required when an object is accessed.
   
 
 #### Advantages & Disadvantages
