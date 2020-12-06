@@ -21,6 +21,18 @@
  * A few shared objects can replace many unshared ones.
  * The identity of each object does not matter.
  
+ 
+#### Effect of concurrency on flyweights
+
+Similar to singleton pattern, if we create flyweight objects in concurrent environment, we may end up having multiple instances of same flyweight object which is not desirable.
+To fix this, we need to use double checked locking as used in singleton pattern while creating flyweights.
+
 
 #### Advantages & Disadvantages
-One of the drawbacks of this pattern is that all instances of the class are related, so single instances of the class will not be able to behave independently from other instances.
+ * Reduce memory consumption of heavy objects that can be controlled identically.
+ * Reduce the total number of “complete but similar objects” in the system.
+ * Provide a centralized mechanism to control the states of many “virtual” objects.
+ * We need to take the time to configure these flyweights. The design time and skills can be overhead, initially.
+ * To create flyweights, we extract a common template class from the existing objects. This additional layer of programming can be tricky and sometimes hard to debug and maintain.
+ * The flyweight pattern is often combined with singleton factory implementation and to guard the singularity, additional cost is required.
+ * One of the drawbacks of this pattern is that all instances of the class are related, so single instances of the class will not be able to behave independently from other instances.
