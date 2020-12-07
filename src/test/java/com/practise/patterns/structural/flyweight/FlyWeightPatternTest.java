@@ -1,12 +1,7 @@
-package com.practise.patterns.structural;
+package com.practise.patterns.structural.flyweight;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.practise.patterns.structural.flyweight.CoffeeFactory;
-import com.practise.patterns.structural.flyweight.CoffeeFlavour;
-import com.practise.patterns.structural.flyweight.CoffeeLatteArt;
-import com.practise.patterns.structural.flyweight.CoffeeShop;
 
 public class FlyWeightPatternTest {
 
