@@ -36,9 +36,11 @@
   field, or an accessor that returns such a field.
 
 * We can make the public array private and add a public immutable list:
+  ``` 
   private static final Thing[] PRIVATE_VALUES = { ... };
     public static final List<Thing> VALUES =
            Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
+  ```
 
 * With the exception of public static final fields, which serve as constants, public classes should have no public 
   fields. Ensure that objects referenced by public static final fields are immutable.
@@ -104,7 +106,7 @@
 
 * Immutable objects make great building blocks for other objects, whether mutable or immutable.
 
-* Immutable objects provide failure atomicity for free (Item 76). Their state never changes, so there is no 
+* Immutable objects provide failure atomicity for free. Their state never changes, so there is no 
   possibility of a temporary inconsistency.
 
 * The major disadvantage of immutable classes is that they require a separate object for each distinct value.
@@ -118,7 +120,8 @@
   object-caching capabilities of the static factories.
 
 * The list of rules for immutable classes at the beginning of this item says that no methods may modify the object and 
-  that all its fields must be final. In fact these rules are a bit stronger than necessary and can be relaxed to improve performance.
+  that all its fields must be final. In fact these rules are a bit stronger than necessary and can be relaxed to improve 
+  performance.
   In truth, no method may produce an externally visible change in the object’s state. However, some immutable classes 
   have one or more non-final fields in which they cache the results of expensive computations the first time they are 
   needed. If the same value is requested again, the cached value is returned, saving the cost of recalculation. This 

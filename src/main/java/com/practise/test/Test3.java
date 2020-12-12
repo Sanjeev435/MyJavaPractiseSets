@@ -1,21 +1,23 @@
 package com.practise.test;
 
 public class Test3 {
+	
+	public static void main(String[] args) {
+		printWord();
+		System.out.println("After printWord");
+		
+	}
 
 	private static void printWord(){
-		System.out.println("private");
+		try {
+			System.out.println("private");
+		}finally {
+			String ss = null;
+			ss.trim();
+			
+			String kk = "";
+			kk.trim();
+		}
 	}
-	
- static void printWord1(){
-	System.out.println("default");
-	}
-
-protected static void printWord2(){
-	System.out.println("protected");
-}
-
-public static void printWord3(){
-	System.out.println("public");
-}
 
 }
