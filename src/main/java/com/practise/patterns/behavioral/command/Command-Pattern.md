@@ -2,10 +2,9 @@
 
 
 #### Implementation
-1. Handler : This can be an interface which will primarily recieve the request and dispatches the request to chain of handlers. It has reference of only first handler in the chain and does not know anything about rest of the handlers.
-2. Concrete handlers : These are actual handlers of the request chained in some sequential order.
-3. Client : Originator of request and this will access the handler to handle it.
-
+ * Command interface which is the command interface
+ * Light is one of a receiver component. It can accept multiple commands related to Light like turn on and off
+ * RemoteControl is the invoker object, which asks the command to carry out the request. Here Light on/off, TurnOffLightCommand,TurnOnLightCommand etc. are different type of command implementations.
 
 #### Usage examples: 
  * Job queues are widely used to facilitate the asynchronous processing of algorithms. By utilizing the command pattern the functionality to be executed can be given to a job queue for processing without any need for the queue to have knowledge of the actual implementation it is invoking. The command object that is enqueued implements its particular algorithm within the confines of the interface the queue is expecting.
