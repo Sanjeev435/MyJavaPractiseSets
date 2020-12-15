@@ -25,13 +25,12 @@
 
 
 #### Advantages & Disadvantages
-<pre>
- ✔ Single Responsibility Principle. Organize the code related to particular states into separate classes.
- ✔ Open/Closed Principle. Introduce new states without changing existing state classes or the context.
+<pre> ✔ Single Responsibility Principle. Organize the code related to particular states into separate classes.</pre>
+<pre> ✔ Open/Closed Principle. Introduce new states without changing existing state classes or the context.</pre>
  ✔ Simplify the code of the context by eliminating bulky state machine conditionals.
  ✔ Helps in reducing complexity by reducing the use of if-else statements or switch/case conditional logic.
  ✔ The benefits of using State pattern to implement polymorphic behavior is clearly visible.
  ✔ The chances of error are less and it’s very easy to add more states for additional behavior. Thus making our code more robust, easily maintainable and flexible
  ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
  ❌ The state pattern is also known as objects for states. So, we can assume that more states need more codes, and the obvious side effect is difficult maintenance for us
-</pre>
+
