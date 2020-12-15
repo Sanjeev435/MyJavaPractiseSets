@@ -27,8 +27,8 @@
 6. Allows loose coupling by encapsulating the way disparate sets of objects interact and communicate with each other.  allows for the actions of each object set to vary independently of one another.
 7. Captures and externalizes an object's internal state so that it can be restored later, all without violating encapsulation.
 8. Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
-9. Allows an object to alter its behaviour when its internal state changes. the object will appear to change its class.
-10. Defines a set of encapsulated algorithms that can be swapped to carry out a specific behaviour
+9. Allows an object to alter its behavior when its internal state changes. the object will appear to change its class.
+10. Defines a set of encapsulated algorithms that can be swapped to carry out a specific behavior
 11. Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. template method lets subclasses redefine certain steps of an algorithm without changing the algorithms structure.
 12. Allows for one or more operation to be applied to a set of objects at runtime, decoupling the operations from the object structure. 
 
@@ -43,11 +43,12 @@ Deals with class relationships that can be changed at compile time.
 |:----------------:|:----------:|:------------------------:|
 | Abstract Factory |  Decorator |         Observer         |
 |  Factory Method  |   Adapter  |  Chain Of Responsibility |
-|     Prototype    |   Facade   |       Interpreter        | // Iteretor
+|     Prototype    |   Facade   |       Interpreter        |
 |      Builder     |    Proxy   |          State           |
 |     Singleton    |   Bridge   |         Command          |
 |        -         |  Flyweight |         Mediator         |
 |        -         |  Composite |     Template Method      |
 |        -         |      -     |         Memento          |
 |        -         |      -     |         Visitor          |
-
+|        -         |      -     |        Iteretor          |
+|        -         |      -     |        Strategy          |
