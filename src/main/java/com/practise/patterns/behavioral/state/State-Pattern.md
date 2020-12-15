@@ -34,3 +34,8 @@
  ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.<br/>
  ❌ The state pattern is also known as objects for states. So, we can assume that more states need more codes, and the obvious side effect is difficult maintenance for us.<br/>
 
+
+#### Relations with Other Patterns
+ * Bridge, State, Strategy (and to some degree Adapter) have very similar structures. Indeed, all of these patterns are based on composition, which is delegating work to other objects. However, they all solve different problems. A pattern isn’t just a recipe for structuring your code in a specific way. It can also communicate to other developers the problem the pattern solves.
+ * State can be considered as an extension of Strategy. Both patterns are based on composition: they change the behavior of the context by delegating some work to helper objects. Strategy makes these objects completely independent and unaware of each other. However, State doesn’t restrict dependencies between concrete states, letting them alter the state of the context at will.
+
