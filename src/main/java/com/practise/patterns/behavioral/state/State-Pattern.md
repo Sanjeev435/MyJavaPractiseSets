@@ -25,7 +25,7 @@
 
 
 #### Advantages & Disadvantages
- ✔ Single Responsibility Principle. Organize the code related to particular states into separate classes.
+ ✔* Single Responsibility Principle. Organize the code related to particular states into separate classes.
  ✔ Open/Closed Principle. Introduce new states without changing existing state classes or the context.
  ✔ Simplify the code of the context by eliminating bulky state machine conditionals.
  ✔ Helps in reducing complexity by reducing the use of if-else statements or switch/case conditional logic.
