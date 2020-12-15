@@ -23,8 +23,9 @@
  * If we do not use the state pattern in such case, we will end up having lots of if-else statements which make the code base ugly, unnecessarily complex and hard to maintain. 
  * State pattern allows the objects to behave differently based on the current state, and we can define state-specific behaviors within different classes.
 
-<pre>
+
 #### Advantages & Disadvantages
+<pre>
  ✔ Single Responsibility Principle. Organize the code related to particular states into separate classes.
  ✔ Open/Closed Principle. Introduce new states without changing existing state classes or the context.
  ✔ Simplify the code of the context by eliminating bulky state machine conditionals.
