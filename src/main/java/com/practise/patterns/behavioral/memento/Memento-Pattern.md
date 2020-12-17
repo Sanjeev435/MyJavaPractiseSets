@@ -1,4 +1,4 @@
-### The Mediator pattern allows for capturing and externalizing an object's internal state so that it can be restored later, all without violating encapsulation. It let us save and restore the previous state of an object without revealing the details of its implementation.
+### The Memento pattern allows for capturing and externalizing an object's internal state so that it can be restored later, all without violating encapsulation. It let us save and restore the previous state of an object without revealing the details of its implementation.
 
 
 #### Implementation
