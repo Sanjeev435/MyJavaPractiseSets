@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface ChatMediator {
 	
-	public List<String> sendMessage(String msg, User user);
+	List<String> sendMessage(String msg, User user);
 
 	void addUser(User user);
 }

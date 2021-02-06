@@ -56,9 +56,10 @@ public class Singleton implements Serializable {
 			throws ClassNotFoundException {
 		ClassLoader classLoader = Thread.currentThread()
 				.getContextClassLoader();
-		if (classLoader == null)
+		if (classLoader == null) {
 			classLoader = Singleton.class.getClassLoader();
-		return (classLoader.loadClass(classname));
+		}
+		return classLoader.loadClass(classname);
 	}
 
 }

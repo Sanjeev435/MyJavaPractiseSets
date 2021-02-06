@@ -41,12 +41,10 @@ public class TestDerby {
 	 * @param restName
 	 * @param cityName
 	 */
-	private static void insertRestaurants(int id, String restName,
-			String cityName) {
+	private static void insertRestaurants(int id, String restName, String cityName) {
 		try {
 			stmt = conn.createStatement();
-			stmt.execute("insert into " + tableName + " values (" + id + ",'"
-					+ restName + "','" + cityName + "')");
+			stmt.execute("insert into " + tableName + " values (" + id + ",'" + restName + "','" + cityName + "')");
 			stmt.close();
 		} catch (SQLException sqlExcept) {
 			sqlExcept.printStackTrace();
@@ -67,8 +65,7 @@ public class TestDerby {
 				System.out.print(rsmd.getColumnLabel(i) + "\t\t");
 			}
 
-			System.out
-					.println("\n-------------------------------------------------");
+			System.out.println("\n-------------------------------------------------");
 
 			while (results.next()) {
 				int id = results.getInt(1);
@@ -96,9 +93,8 @@ public class TestDerby {
 				conn.close();
 			}
 		} catch (SQLException sqlExcept) {
-
+			sqlExcept.printStackTrace();
 		}
-
 	}
 }
 
@@ -106,18 +102,17 @@ public class TestDerby {
  * 
  * DB TEST QUERY
  * 
-
-CREATE table APP.EMPLOYES (EMP_ID INT PRIMARY KEY, EMP_NME VARCHAR(30), EMP_DEPT VARCHAR(100));
-commit;
-
-CREATE table APP.RESTAURANTS (ID INT PRIMARY KEY, REST_NAME VARCHAR(30), CITY_NAME VARCHAR(100));
-commit;
-
-INSERT INTO APP.EMPLOYES (EMP_ID, EMP_NME, EMP_DEPT) values
-(11111111,'AMIT','MANAGER');
-
-select * from APP.EMPLOYES;
- 
- 
+ * 
+ * CREATE table APP.EMPLOYES (EMP_ID INT PRIMARY KEY, EMP_NME VARCHAR(30),
+ * EMP_DEPT VARCHAR(100)); commit;
+ * 
+ * CREATE table APP.RESTAURANTS (ID INT PRIMARY KEY, REST_NAME VARCHAR(30),
+ * CITY_NAME VARCHAR(100)); commit;
+ * 
+ * INSERT INTO APP.EMPLOYES (EMP_ID, EMP_NME, EMP_DEPT) values
+ * (11111111,'AMIT','MANAGER');
+ * 
+ * select * from APP.EMPLOYES;
+ * 
+ * 
  */
- 

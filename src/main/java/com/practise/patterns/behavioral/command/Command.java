@@ -6,5 +6,5 @@ package com.practise.patterns.behavioral.command;
  *         Command Class
  */
 public interface Command {
-	public void execute();
+	void execute();
 }

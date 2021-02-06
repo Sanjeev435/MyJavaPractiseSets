@@ -13,7 +13,7 @@ package com.practise.patterns.structural.bridge;
  */
 public interface Product {
 
-	public String productName();
+	String productName();
 
-	public void produce();
+	void produce();
 }

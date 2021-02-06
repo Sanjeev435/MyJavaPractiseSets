@@ -45,7 +45,7 @@ public abstract class House {
 	 * final implementation of constructing roof - final as all type of house Should
 	 * build roof in same manner.
 	 */
-	private final String constructRoof() {
+	private String constructRoof() {
 		return "Roof has been constructed.";
 	}
 
@@ -53,7 +53,7 @@ public abstract class House {
 	 * final implementation of constructing base - final as all type of house Should
 	 * build base/foundation in same manner.
 	 */
-	private final String constructBase() {
+	private String constructBase() {
 		return "Base has been constructed.";
 	}
 }

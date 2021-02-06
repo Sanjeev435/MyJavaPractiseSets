@@ -53,7 +53,7 @@ public class BinarySearchIterative {
 	 */
 	private static void searchNumberInArray(int[] aIntArray, int aInput) {
 		int startPoint = 0;
-		int endPoint = (aIntArray.length - 1);
+		int endPoint = aIntArray.length - 1;
 		boolean notFound = true;
 		while (startPoint <= endPoint) {
 			int midPoint = (startPoint + endPoint) / 2;

@@ -1,8 +1,8 @@
 package com.practise.patterns.behavioral.iterator;
 
-interface ChannelIterator {
+public interface ChannelIterator {
 
-	public boolean hasNext();
+	boolean hasNext();
 
-	public Channel next();
+	Channel next();
 }

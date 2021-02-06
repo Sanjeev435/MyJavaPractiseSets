@@ -58,8 +58,8 @@ public class FredoAndMaths {
 				Integer m = null;
 
 				String[] arrayOfNum = inputLine.split(" ");
-				boolean sizeOfInputCorrect = (arrayOfNum.length == 3 ? true
-						: false);
+				boolean sizeOfInputCorrect = arrayOfNum.length == 3 ? true
+						: false;
 
 				if (sizeOfInputCorrect) {
 					boolean parsingFails = false;

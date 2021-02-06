@@ -33,5 +33,12 @@ public class Circle extends Shape{
 		Circle circle = (Circle)target;
 		return circle.radius == this.radius;
 	}
+	
+	@Override
+	public int hashCode() {
+		int result = 31;
+		result = 31 * result + this.radius;
+		return result;
+	}
 
 }

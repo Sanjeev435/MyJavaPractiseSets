@@ -40,7 +40,7 @@ public class ClassMakerStringProblem {
 				} else if (!strTemp.equals(aString)) {
 					if (aIndexList.size() > 0) {
 						break;
-					} else if (count == (stringList.size() - 1)) {
+					} else if (count == stringList.size() - 1) {
 						matchedFound = false;
 						break;
 					} else

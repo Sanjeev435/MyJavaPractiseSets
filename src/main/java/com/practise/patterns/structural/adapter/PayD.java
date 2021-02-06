@@ -9,23 +9,23 @@ package com.practise.patterns.structural.adapter;
  */
 public interface PayD {
 
-	public String getCustCardNo();
+	String getCustCardNo();
 
-	public String getCardOwnerName();
+	String getCardOwnerName();
 
-	public String getCardExpMonthDate();
+	String getCardExpMonthDate();
 
-	public Integer getCVVNo();
+	Integer getCVVNo();
 
-	public Double getTotalAmount();
+	Double getTotalAmount();
 
-	public void setCustCardNo(String custCardNo);
+	void setCustCardNo(String custCardNo);
 
-	public void setCardOwnerName(String cardOwnerName);
+	void setCardOwnerName(String cardOwnerName);
 
-	public void setCardExpMonthDate(String cardExpMonthDate);
+	void setCardExpMonthDate(String cardExpMonthDate);
 
-	public void setCVVNo(Integer cVVNo);
+	void setCVVNo(Integer cVVNo);
 
-	public void setTotalAmount(Double totalAmount);
+	void setTotalAmount(Double totalAmount);
 }

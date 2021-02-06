@@ -8,5 +8,5 @@ package com.practise.patterns.behavioral.visitor;
  *         going into that much detail and focusing on visitor pattern only.
  */
 public interface ItemElement {
-	public int accept(ShoppingCartVisitor visitor);
+	int accept(ShoppingCartVisitor visitor);
 }

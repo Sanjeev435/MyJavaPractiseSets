@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>MyJavaPractiseSets</groupId>
+	<groupId>com.practise</groupId>
 	<artifactId>MyJavaPractiseSets</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -80,7 +80,7 @@
 			</plugin>
 
 			<!-- FindBug plugin for Static code analysis -->
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.3</version>
@@ -98,7 +98,7 @@
 					<failOnError>false</failOnError>
 					<xmlOutput>true</xmlOutput>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
 			<!-- PMD plugin for Static code analysis -->
 			<plugin>
