@@ -1,5 +1,5 @@
 
-## ------------------------------------  **Classes and Interfaces** ------------------------------
+## Classes and Interfaces
 
 
 ### 1. Minimize the accessibility of classes and members.
@@ -12,15 +12,11 @@
 
 * Make each class or member as inaccessible as possible
 
-* For members (fields, methods, nested classes, and nested interfaces), there are four possible access levels, listed 
-  here in order of increasing accessibility:
-  • Private—The member is accessible only from the top-level class where it is declared.
-  • Package-private—The member is accessible from any class in the package where it is declared. Technically known as 
-    default access, this is the access level you get if no access modifier is specified (except for interface members,
-    which are public by default).
-  • Protected—The member is accessible from subclasses of the class where it is declared and from any class in the
-    package where it is declared.
-  • Public—The member is accessible from anywhere.
+* For members (fields, methods, nested classes, and nested interfaces), there are four possible access levels, listed here in order of increasing accessibility:
+	* Private—The member is accessible only from the top-level class where it is declared.
+	* Package-private—The member is accessible from any class in the package where it is declared. Technically known as default access, this is the access level you get if no access modifier is specified (except for interface members, which are public by default).
+	* Protected—The member is accessible from subclasses of the class where it is declared and from any class in the package where it is declared.
+	* Public—The member is accessible from anywhere.
 
 * There is a key rule that restricts your ability to reduce the accessibility of methods. If a method overrides a 
   superclass method, it cannot have a more restrictive access level in the subclass than in the superclass.
