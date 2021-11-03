@@ -2,11 +2,17 @@ package com.practise.algo.sort;
 
 /**
  * In most cases the insertion sort is the best of the elementary sorts
- * described in this chapter. It still executes in O(N2) time, but it’s about
+ * described in this chapter. It still executes in O(n^2) time, but it’s about
  * twice as fast as the bubble sort and somewhat faster than the selection sort
  * in normal situations. It’s also not too complex, although it’s slightly more
  * involved than the bubble and selection sorts. It’s often used as the final
  * stage of more sophisticated sorts, such as quicksort.
+ * 
+ *       <pre> Complexities of Insertion sort is as below :   
+ *        <b> Best : Ω(n) </b>
+ *        <b> Average : Θ(n^2) </b>
+ *        <b> Worst : O(n^2) </b>
+ *       </pre>
  * 
  * @author Sanjeev
  *

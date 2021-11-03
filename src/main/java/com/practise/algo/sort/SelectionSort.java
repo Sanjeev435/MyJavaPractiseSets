@@ -2,13 +2,18 @@ package com.practise.algo.sort;
 
 /**
  * The selection sort improves on the bubble sort by reducing the number of
- * swaps necessary from O(N2) to O(N). Unfortunately, the number of comparisons
- * remains O(N2). However, the selection sort can still offer a significant
+ * swaps necessary from O(n^2) to O(n). Unfortunately, the number of comparisons
+ * remains O(n^2). However, the selection sort can still offer a significant
  * improvement for large records that must be physically moved around in memory,
  * causing the swap time to be much more important than the comparison time.
  * (Typically, this isn’t the case in Java, where references are moved around,
  * not entire objects.)
- * 
+ *       <pre> Complexities of Selection sort is as below :   
+ *        <b> Best : Ω(n^2) </b>
+ *        <b> Average : Θ(n^2) </b>
+ *        <b> Worst : O(n^2) </b>
+ *       </pre>
+ *       
  * @author Sanjeev
  *
  * @param <E>
