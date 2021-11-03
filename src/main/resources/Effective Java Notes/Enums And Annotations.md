@@ -97,6 +97,4 @@ enum PayrollDay {
 * There is a very fast Map implementation designed for use with enum keys, known as <b>java.util.EnumMap</b>
 * The reason that EnumMap is comparable in speed to an ordinal-indexed array is that <b>EnumMap</b> uses such an array internally, but it hides this implementation detail from the programmer, combining the richness and type safety of a Map with the speed of an array
 * EnumMap constructor takes the Class object of the key type: this is a <b><i>bounded type token</i></b>, which provides runtime generic type information.
-> ```java 
-Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle = new EnumMap<>(Plant.LifeCycle.class); 
-```
+> Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle = new EnumMap<>(Plant.LifeCycle.class); 
