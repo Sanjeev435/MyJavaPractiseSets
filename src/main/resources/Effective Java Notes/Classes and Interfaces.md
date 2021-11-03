@@ -2,34 +2,27 @@
 ## Classes and Interfaces
 
 
-### 1. Minimize the accessibility of classes and members.
+### Minimize the accessibility of classes and members.
 
-* The single most important factor that distinguishes a well-designed component from a poorly designed one is the 
-  degree to which the component hides its internal data and other implementation details from other components. 
-  A well-designed component hides all its implementation details, cleanly separating its API from its implementation. 
-  Components then communicate only through their APIs and are oblivious to each others’ inner workings. This concept, 
-  known as information hiding or encapsulation.
+* The single most important factor that distinguishes a well-designed component from a poorly designed one is the  degree to which the component hides its internal data and other implementation details from other components. A well-designed component hides all its implementation details, cleanly separating its API from its implementation. Components then communicate only through their APIs and are oblivious to each others’ inner workings. This concept, known as information hiding or encapsulation.
 
 * Make each class or member as inaccessible as possible
 
 * For members (fields, methods, nested classes, and nested interfaces), there are four possible access levels, listed here in order of increasing accessibility:
-	* Private—The member is accessible only from the top-level class where it is declared.
-	* Package-private—The member is accessible from any class in the package where it is declared. Technically known as default access, this is the access level you get if no access modifier is specified (except for interface members, which are public by default).
-	* Protected—The member is accessible from subclasses of the class where it is declared and from any class in the package where it is declared.
-	* Public—The member is accessible from anywhere.
+	* Private — The member is accessible only from the top-level class where it is declared.
+	* Package-private — The member is accessible from any class in the package where it is declared. Technically known as default access, this is the access level you get if no access modifier is specified (except for interface members, which are public by default).
+	* Protected — The member is accessible from subclasses of the class where it is declared and from any class in the package where it is declared.
+	* Public — The member is accessible from anywhere.
 
-* There is a key rule that restricts your ability to reduce the accessibility of methods. If a method overrides a 
-  superclass method, it cannot have a more restrictive access level in the subclass than in the superclass.
+* There is a key rule that restricts your ability to reduce the accessibility of methods. If a method overrides a superclass method, it cannot have a more restrictive access level in the subclass than in the superclass.
 
-* A special case of this rule is that if a class implements an interface, all of the class methods that are in the 
-  interface must be declared public in the class.
+* A special case of this rule is that if a class implements an interface, all of the class methods that are in the interface must be declared public in the class.
 
 * Instance fields of public classes should rarely be public.
 
 * Classes with public mutable fields are not generally thread-safe.
 
-* Note that a nonzero-length array is always mutable, so it is wrong for a class to have a public static final array 
-  field, or an accessor that returns such a field.
+* Note that a nonzero-length array is always mutable, so it is wrong for a class to have a public static final array field, or an accessor that returns such a field.
 
 * We can make the public array private and add a public immutable list:
   ``` 
@@ -38,61 +31,44 @@
            Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
   ```
 
-* With the exception of public static final fields, which serve as constants, public classes should have no public 
-  fields. Ensure that objects referenced by public static final fields are immutable.
+* With the exception of public static final fields, which serve as constants, public classes should have no public fields. Ensure that objects referenced by public static final fields are immutable.
 
 
-**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+### In public classes, use accessor methods, not public fields.
 
-
-### 2. In public classes, use accessor methods, not public fields.
-
-* Classes with public accessor should always be replaced by classes with private fields and public accessor methods 
-  (getters) and, for mutable classes, mutators (setters).
+* Classes with public accessor should always be replaced by classes with private fields and public accessor methods (getters) and, for mutable classes, mutators (setters).
 
 * If a class is accessible outside its package, provide accessor methods.
 
-* If a class is package-private or is a private nested class, there is nothing inherently wrong with exposing its 
-  data fields.
+* If a class is package-private or is a private nested class, there is nothing inherently wrong with exposing its data fields.
 
-* Public classes should never expose mutable fields. It is less harmful, though still questionable, for public 
-  classes to expose immutable fields. It is, however, sometimes desirable for package-private or private nested 
-  classes to expose fields, whether mutable or immutable.
+* Public classes should never expose mutable fields. It is less harmful, though still questionable, for public classes to expose immutable fields. It is, however, sometimes desirable for package-private or private nested classes to expose fields, whether mutable or immutable.
 
 
-**XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
-
-
-### 3. Minimize mutability
+### Minimize mutability
 
 * To make a class immutable, follow these five rules:
-  • Don’t provide methods that modify the object’s state (known as mutators).
-  • Ensure that the class can’t be extended.
-  • Make all fields final.
-  • Make all fields private
-  • Ensure exclusive access to any mutable components. 
-    If our class has any fields that refer to mutable objects, ensure that clients of the class cannot obtain 
-    references to these objects. Never initialize such a field to a client-provided object reference or return 
-    the field from an accessor. Make defensive copies in constructors, accessors, and readObject methods.
+	* Don’t provide methods that modify the object’s state (known as mutators).
+	* Ensure that the class can’t be extended.
+	* Make all fields final.
+	* Make all fields private
+	* Ensure exclusive access to any mutable components. 
+	* If our class has any fields that refer to mutable objects, ensure that clients of the class cannot obtain references to these objects. 
+	* Never initialize such a field to a client-provided object reference or return the field from an accessor. Make defensive copies in constructors, accessors, and readObject methods.
 
-* A pattern is known as the functional approach when methods return the result of applying a function to their 
-  operand, without modifying it. Means the function will return the data without altering the class instance.
+* A pattern is known as the functional approach when methods return the result of applying a function to their operand, without modifying it. Means the function will return the data without altering the class instance.
 
-* The functional approach may appear unnatural if you’re not familiar with it, but it enables immutability, which 
-  has many advantages.
+* The functional approach may appear unnatural if you’re not familiar with it, but it enables immutability, which has many advantages.
 
 * An immutable object can be in exactly one state, the state in which it was created.
 
 * Immutable objects are inherently thread-safe; they require no synchronization.
 
-* Since no thread can ever observe any effect of another thread on an immutable object, immutable objects can be 
-  shared freely.
+* Since no thread can ever observe any effect of another thread on an immutable object, immutable objects can be shared freely.
 
-* Opting for static factories in place of public constructors when designing a new class gives you the flexibility 
-  to add caching later, without modifying clients.
+* Opting for static factories in place of public constructors when designing a new class gives you the flexibility to add caching later, without modifying clients.
 
-* A consequence of the fact that immutable objects can be shared freely is that we never have to make defensive 
-  copies of them.
+* A consequence of the fact that immutable objects can be shared freely is that we never have to make defensive copies of them.
 
 * We need not and should not provide a clone method or copy constructor on an immutable class. This was not well 
   understood in the early days of the Java platform, so the String class does have a copy constructor, but it should 
