@@ -25,7 +25,7 @@
 * Note that a nonzero-length array is always mutable, so it is wrong for a class to have a public static final array field, or an accessor that returns such a field.
 
 * We can make the public array private and add a public immutable list:
-  ``` 
+  ```java
   private static final Thing[] PRIVATE_VALUES = { ... };
     public static final List<Thing> VALUES =
            Collections.unmodifiableList(Arrays.asList(PRIVATE_VALUES));
