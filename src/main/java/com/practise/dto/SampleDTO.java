@@ -1,16 +1,16 @@
 package com.practise.dto;
 
-public class BinarySearchSampleDTO implements Comparable<BinarySearchSampleDTO> {
+public class SampleDTO implements Comparable<SampleDTO> {
 
 	String empFirstName;
 	String emplastName;
 	int id;
 
-	public int compareTo(BinarySearchSampleDTO a) {
+	public int compareTo(SampleDTO a) {
 		return this.empFirstName.compareTo(a.empFirstName);
 	}
 
-	public BinarySearchSampleDTO(String empFirstName, String emplastName, int id) {
+	public SampleDTO(String empFirstName, String emplastName, int id) {
 		this.empFirstName = empFirstName;
 		this.emplastName = emplastName;
 		this.id = id;

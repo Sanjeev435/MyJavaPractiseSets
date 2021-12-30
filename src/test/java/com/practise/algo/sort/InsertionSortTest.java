@@ -14,9 +14,9 @@ import org.junit.Test;
 public class InsertionSortTest {
 
 	@Test
-	public void sortTestForInteger() {
+	public void insertionSortTestForInteger() {
 		Integer[] testArray = { 45, 85, 36, 32, 6, 35, 68, 767, 46, 70, 26, 99, 257, 59 };
-		InsertionSort<Integer> insertionSort = new InsertionSort<Integer>(testArray);
+		InsertionSort<Integer> insertionSort = new InsertionSort<>(testArray);
 		insertionSort.sort();
 
 		Integer[] successArray = { 6, 26, 32, 35, 36, 45, 46, 59, 68, 70, 85, 99, 257, 767 };
@@ -25,9 +25,9 @@ public class InsertionSortTest {
 	}
 
 	@Test
-	public void sortTestForString() {
+	public void insertionSortTestForString() {
 		String[] testArray = { "Mohan", "Kartik", "Zeus", "Luffy", "Zorro", "Franky", "Sanji", "Nami", "Usopp" };
-		InsertionSort<String> insertionSort = new InsertionSort<String>(testArray);
+		InsertionSort<String> insertionSort = new InsertionSort<>(testArray);
 		insertionSort.sort();
 
 		String[] successArray = { "Franky", "Kartik", "Luffy", "Mohan", "Nami", "Sanji", "Usopp", "Zeus", "Zorro" };

@@ -1,0 +1,78 @@
+{
+    "page": 1,
+    "per_page": 10,
+    "total": 35,
+    "total_pages": 4,
+    "data": [
+        {
+            "name": "UEFA Champions League",
+            "country": "",
+            "year": 2011,
+            "winner": "Chelsea",
+            "runnerup": "Bayern Munich"
+        },
+        {
+            "name": "UEFA Champions League",
+            "country": "",
+            "year": 2012,
+            "winner": "Bayern Munich",
+            "runnerup": "Borussia Dortmund"
+        },
+        {
+            "name": "UEFA Champions League",
+            "country": "",
+            "year": 2013,
+            "winner": "Real Madrid",
+            "runnerup": "Atletico Madrid"
+        },
+        {
+            "name": "UEFA Champions League",
+            "country": "",
+            "year": 2014,
+            "winner": "Barcelona",
+            "runnerup": "Juventus"
+        },
+        {
+            "name": "UEFA Champions League",
+            "country": "",
+            "year": 2015,
+            "winner": "Real Madrid",
+            "runnerup": "Atletico Madrid"
+        },
+        {
+            "name": "English Premier League",
+            "country": "England",
+            "year": 2011,
+            "winner": "Manchester City",
+            "runnerup": "Manchester United"
+        },
+        {
+            "name": "English Premier League",
+            "country": "England",
+            "year": 2012,
+            "winner": "Manchester United",
+            "runnerup": "Manchester City"
+        },
+        {
+            "name": "English Premier League",
+            "country": "England",
+            "year": 2013,
+            "winner": "Manchester City",
+            "runnerup": "Liverpool"
+        },
+        {
+            "name": "English Premier League",
+            "country": "England",
+            "year": 2014,
+            "winner": "Chelsea",
+            "runnerup": "Manchester City"
+        },
+        {
+            "name": "English Premier League",
+            "country": "England",
+            "year": 2015,
+            "winner": "Leicester City",
+            "runnerup": "Arsenal"
+        }
+    ]
+}

@@ -1,5 +1,7 @@
 package com.practise.algo.sort;
 
+import com.practise.util.Util;
+
 /**
  * In most cases the insertion sort is the best of the elementary sorts
  * described in this chapter. It still executes in O(n^2) time, but it’s about
@@ -8,11 +10,12 @@ package com.practise.algo.sort;
  * involved than the bubble and selection sorts. It’s often used as the final
  * stage of more sophisticated sorts, such as quicksort.
  * 
- *       <pre> Complexities of Insertion sort is as below :   
+ * <pre>
+ *  Complexities of Insertion sort is as below :   
  *        <b> Best : Ω(n) </b>
  *        <b> Average : Θ(n^2) </b>
  *        <b> Worst : O(n^2) </b>
- *       </pre>
+ * </pre>
  * 
  * @author Sanjeev
  *
@@ -25,7 +28,7 @@ public class InsertionSort<E extends Object> {
 	public InsertionSort(E[] array) {
 		this.array = array;
 	}
-	
+
 	/**
 	 * Sort the Array
 	 */
@@ -36,30 +39,13 @@ public class InsertionSort<E extends Object> {
 		for (out = 1; out < length; out++) {
 			E temp = array[out];
 			in = out;
-			
-			while(in > 0 && compare(array[in - 1], temp) > 0) {
+
+			while (in > 0 && Util.compare(array[in - 1], temp) > 0) {
 				array[in] = array[in - 1];
 				--in;
 			}
 
 			array[in] = temp;
-		}
-	}
-
-	/**
-	 * Compare two elements
-	 * 
-	 * @param obj1
-	 * @param obj2
-	 * @return
-	 */
-	private int compare(E obj1, E obj2) {
-		if (obj1 instanceof String) {
-			return ((String) obj1).compareTo((String) obj2);
-		} else if (obj1 instanceof Integer) {
-			return ((Integer) obj1).compareTo((Integer) obj2);
-		} else {
-			return 0;
 		}
 	}
 }

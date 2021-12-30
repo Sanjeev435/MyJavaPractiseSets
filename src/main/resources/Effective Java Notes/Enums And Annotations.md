@@ -1,6 +1,6 @@
 ## Enums And Annotations:
 
-### Use enums instead of int constants :
+### 1. Use enums instead of int constants :
 * Old way to decalre a static final int constant is known as <i>enum pattern</i>
 * It provides nothing in the way of type safety and little in the way of expressive power. The compiler won’t complain if you pass an apple to a method that expects an orange, compare apples to oranges with the == operator.
 * Programs that use int enums are brittle. Because int enums are constant variables, their int values are compiled into the clients that use them. If the value associated with an int enum is changed, its clients must be recompiled.
@@ -61,7 +61,8 @@ enum PayrollDay {
 * It is not necessary that the set of constants in an enum type stay fixed for all time.
 
 
-### Use instance fields instead of ordinals :
+- - - -
+### 2. Use instance fields instead of ordinals :
 * All enums have an ordinal method, which returns the numerical position of each enum constant in its type.
 * Abuse of ordinal : If the constants are reordered, the <i>numberOfMusicians</i> method will break.
 ```java
@@ -93,8 +94,28 @@ enum PayrollDay {
 * According to the Enum specification, <b>Ordinal</b> is designed for use by general-purpose enumbased data structures such as EnumSet and EnumMap. Unless you are writing code with this character, you are best off avoiding the ordinal method entirely.
 
 
-### Use EnumMap instead of ordinal indexing :
+- - - -
+### 3. Use EnumMap instead of ordinal indexing :
 * There is a very fast Map implementation designed for use with enum keys, known as <b>java.util.EnumMap</b>
 * The reason that EnumMap is comparable in speed to an ordinal-indexed array is that <b>EnumMap</b> uses such an array internally, but it hides this implementation detail from the programmer, combining the richness and type safety of a Map with the speed of an array
 * EnumMap constructor takes the Class object of the key type: this is a <b><i>bounded type token</i></b>, which provides runtime generic type information.
-> Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle = new EnumMap<>(Plant.LifeCycle.class); 
+```java
+   // Using an EnumMap to associate data with an enum
+   Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle = new EnumMap<>(Plant.LifeCycle.class);
+
+   for (Plant.LifeCycle lc : Plant.LifeCycle.values())
+   	  plantsByLifeCycle.put(lc, new HashSet<>());
+
+   for (Plant p : garden) 
+   	  plantsByLifeCycle.get(p.lifeCycle).add(p);
+
+   System.out.println(plantsByLifeCycle);
+```
+* This above program can be further shortened by using a stream. Also note that by default stream grouping use HashMap, so in order to use EnumMap, we need to use <b><i>three-parameter form of Collectors.groupingBy</i></b>, which allow the caller to specify the map implementation using the mapFactory parameter.
+```java
+// Using a stream and an EnumMap to associate data with an enum
+    System.out.println(Arrays.stream(garden)
+    	.collect(groupingBy(p -> p.lifeCycle,
+    		() -> new EnumMap<>(LifeCycle.class), toSet())));
+```
+
