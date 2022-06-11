@@ -1,4 +1,4 @@
-package com.practise.collection.linkedlist;
+package com.practise.ds.linkedlist;
 
 import java.util.NoSuchElementException;
 
@@ -10,7 +10,7 @@ import com.practise.util.Util;
  * 
  *         <br/>
  *         <br/>
- *         <b>Custom Linked List</b><br/>
+ *         <b>Custom Singly Linked List</b><br/>
  *         <br/>
  * 
  *         <b><u>Implemented Functions : </u></b><br/>
@@ -19,6 +19,8 @@ import com.practise.util.Util;
  *         this list.<br/>
  *         <b>boolean offer(E data) -></b> Adds the specified element as the
  *         tail (last element) of this list.<br/>
+ *         <b>void insertNodeAtPosition(int position, E data) -></b> Adds the 
+ *         specified element at the given position index.<br/>
  *         <br/>
  * 
  *         <b>E element() -></b> Retrieves, but does not remove, the head (first
@@ -42,11 +44,14 @@ import com.practise.util.Util;
  *         <br/>
  * 
  *         <b>int size() -></b> Returns the number of elements in this
- *         list.<br/>
+ *         list.<br/><br/>
+ *         
+ *         <b>String toString() -></b> Get contents of linked list in a string 
+ *         format.<br/>
  * 
  * @param <E>
  */
-public class LinkedList<E> {
+public class SinglyLinkedList<E> {
 
 	private int size;
 	private Node<E> head;
@@ -59,11 +64,10 @@ public class LinkedList<E> {
 		Node<E> node = new Node<>(a);
 		if (head == null) {
 			head = node;
-			tail = node;
 		} else {
 			tail.next = node;
-			tail = node;
 		}
+		tail = node;
 		size += 1;
 	}
 
@@ -73,6 +77,10 @@ public class LinkedList<E> {
 	 * @param e
 	 */
 	public boolean offer(E data) {
+		if (tail == null) {
+			throw new NoSuchElementException("Linked List is not intialized !!");
+		}
+		
 		if (tail != null) {
 			Node<E> node = new Node<>(data);
 
@@ -88,13 +96,39 @@ public class LinkedList<E> {
 	}
 	
 	/**
+	 * Insert data at a given position
+	 * 
+	 * @param data
+	 * @param position
+	 */
+	public void insertNodeAtPosition(int position, E data) {
+		if (head == null) {
+			throw new NoSuchElementException("Linked List is not intialized !!");
+		}
+
+		Node<E> node = head;
+		while (node != null) {
+			if (position == 1) {
+				Node<E> temp = node.next;
+				node.next = new Node<>(data);
+				node.next.next = temp;
+				size += 1;
+
+				break;
+			}
+			position -= 1;
+			node = node.next;
+		}
+	}
+	
+	/**
 	 * Returns the element at the specified position in this list.
 	 * 
 	 * @param index
 	 * @return
 	 */
 	public E get(int index) {
-		if (head == null || index > size()) {
+		if (head == null || index >= size()) {
 			throw new NoSuchElementException("Linked List is not intialized !!");
 		}
 
@@ -171,7 +205,7 @@ public class LinkedList<E> {
 	 * @return
 	 */
 	public E remove(int index) {
-		if (head == null || index > size()) {
+		if (head == null || index >= size()) {
 			throw new NoSuchElementException("Linked List is not intialized !!");
 		}
 
@@ -202,12 +236,12 @@ public class LinkedList<E> {
 	 * @param data
 	 */
 	public int indexOf(E data) {
-		Node<E> node = head;
-		int count = 0;
-
 		if (head == null) {
 			throw new NoSuchElementException("Linked List is not intialized !!");
 		}
+		
+		Node<E> node = head;
+		int count = 0;
 
 		while (node != null) {
 			if (Util.compare(node.data, data) == 0) {
@@ -226,7 +260,32 @@ public class LinkedList<E> {
 	public int size() {
 		return this.size;
 	}
-
+	
+	/**
+	 * Get contents of linked list in a string format.
+	 */
+	@Override
+	public String toString() {
+		if (head == null) {
+			return "";
+		}
+		
+		StringBuilder sb = new StringBuilder("[");
+		
+		Node<E> node = head;
+		while(node != null) {
+			sb.append(node.data);
+			if(node.next != null) {
+				sb.append(", ");
+			}else {
+				sb.append("]");
+			}
+			node = node.next;
+		}
+		
+		return sb.toString();
+	}
+	
 	private static class Node<E> {
 		private E data;
 		private Node<E> next;

@@ -1,0 +1,25 @@
+                                                     XMLParser <<Interface>>
+                                                                |
+                                                      parse()   | <<implements>>
+                                                                V
+        ------------------------------------------------------------------------------------------------------------
+        |                                  |                                    |                                  |
+        V                                  V                                    V                                  V
+  NYOrderXMLParser <<class>>     NYFeedbackXMLParser <<class>>         TWOrderXMLParser <<class>>        TWFeedbackXMLParser <<class>>                                                 
+            |                        |                                            |                               |
+            |                        |                                            |                               |
+            --------------------------                                            ---------------------------------
+                         |                  AastractParserFactory <<abstract class>>               |
+getParserInstance        |                                     |                                   | getParserInstance
+    (String parserType)  |        <<extends>>                  V            <<extends>>            |        (String parserType)
+                         V <---------------------------------------------------------------------> V
+              NYParserFactory                                                             TWParserFactory
+                       |                                                                          |
+                       |                                                                          |
+                       V                                                                          V
+                       ----------------------------------------------------------------------------
+                                                              |
+                                                              | getFactory
+                                                              |       (String factoryType)
+                                                              V
+                                                ParserFactoryProducer <<class>

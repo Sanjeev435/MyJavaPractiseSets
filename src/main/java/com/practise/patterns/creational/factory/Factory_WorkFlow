@@ -1,0 +1,21 @@
+                                      XMLParser <<Interface>>
+                                               |
+                                               | <<implements>>
+                                               |
+                                               V
+                                      ErrorXMLParser <<Class>>
+                                               |
+                                               | parse() [overridden]
+                                               |
+                                               |
+                                               V
+                                   DisplayService <<Abstract Class>>
+                                               |
+                                               | display() [concrete method]
+                                               | getParser() [abstract method]
+                                               |
+                                               |<<extends>>
+                                               |
+                                               V
+                                   ErrorXMLDispalyService <<Class>>
+                                     - Initialize Parser

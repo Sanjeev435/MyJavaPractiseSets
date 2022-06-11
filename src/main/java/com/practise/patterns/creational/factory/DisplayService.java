@@ -13,10 +13,10 @@ package com.practise.patterns.creational.factory;
  */
 public abstract class DisplayService {
 
-	public void display() {
+	public String display() {
 		XMLParser parser = getParser();
 		String msg = parser.parse();
-		System.out.println(msg);
+		return msg;
 	}
 
 	protected abstract XMLParser getParser();

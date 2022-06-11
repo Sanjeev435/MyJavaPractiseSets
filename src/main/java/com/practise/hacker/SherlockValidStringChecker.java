@@ -22,7 +22,7 @@ import com.practise.util.Util;
  */
 public class SherlockValidStringChecker {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		  System.out.println(isValid("aac")); // YES 
 		  System.out.println(isValid("ab")); // YES 
@@ -33,7 +33,9 @@ public class SherlockValidStringChecker {
 		  System.out.println(isValid("aabbccddeefghi")); // NO
 		  System.out.println(isValid("abcdefghhgfedecba")); // YES
 		  
-		  System.out.println(isValid(Util.getFileContentFromResource("big" + File.separator + "files" + File.separator +"bigTestFile.txt")));
+		  System.out.println(isValid(
+				  Util.getFileContentFromResource("big" + File.separator
+						  + "files" + File.separator +"bigTestFile.txt")));
 
 	}
 
